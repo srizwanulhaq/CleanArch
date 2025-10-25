@@ -20,3 +20,31 @@ This project separates concerns across layers, uses **DTOs** for incoming data, 
 
 ## 🧩 Architecture Overview
 
+src/
+├── CleanArch.Domain/
+│   └── Entities/
+│       └── Product.cs
+│
+├── CleanArch.Application/
+│   ├── DTOs/
+│   │   ├── ProductCreateDto.cs
+│   │   └── ProductUpdateDto.cs
+│   ├── Interfaces/
+│   │   ├── IProductService.cs
+│   │   └── IProductRepository.cs
+│   └── Services/
+│       └── ProductService.cs
+│
+├── CleanArch.Infrastructure/
+│   ├── Persistence/
+│   │   └── ApplicationDbContext.cs
+│   ├── DAOs/
+│   │   └── ProductDao.cs
+│   └── Repositories/
+│       └── ProductRepository.cs
+│
+└── CleanArch.WebAPI/
+    ├── Controllers/
+    │   └── ProductsController.cs
+    ├── wwwroot/
+    └── Program.cs
